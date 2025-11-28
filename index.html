@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,13 +10,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --primary-color: #7A3E00;
       --accent-gold: #c89b57;
       --soft-bg: #f8f3ec;
@@ -23,42 +26,52 @@
       --card-bg: #fffaf3;
     }
 
-    body { font-family: "Merriweather", serif; background: var(--soft-bg); color: #2e2e2e; }
-    h1,h2,h3,h4 { font-family: "Poppins", sans-serif; color: var(--primary-color); }
-
-    .navbar { background-color: var(--dark-brown) !important; }
-    .navbar .navbar-brand, .navbar .nav-link { color: #fff !important; }
-    .navbar .nav-link:hover { color: var(--accent-gold) !important; }
-
-    #hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      background-image: linear-gradient(rgba(12,8,4,0.25), rgba(12,8,4,0.25)), url('images/main.png');
-      background-size: cover;
-      background-position: center;
-      padding-top: 70px;
-      color: #fff;
+    body {
+      font-family: "Merriweather", serif;
+      background: var(--soft-bg);
+      color: #2e2e2e;
     }
-    #hero .hero-card {
-      background: rgba(255,255,255,0.92);
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 12px 30px rgba(46,34,20,0.15);
-      color: var(--dark-brown);
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Poppins", sans-serif;
+      color: var(--primary-color);
+    }
+
+    .navbar {
+      background-color: var(--dark-brown) !important;
+    }
+
+    .navbar .nav-link:hover {
+      color: var(--accent-gold) !important;
+    }
+
+    /* HERO FULL IMAGE */
+    #hero {
+      min-height: 100vh;
+      background-image: url('images/main.png');
+      background-size: cover;
+      /* fills entire section */
+      background-position: center;
+      /* centers image */
+      background-repeat: no-repeat;
+      margin-top: 65px;
     }
 
     .product-card {
-      background: white;
+      background: #fff;
       border-radius: 12px;
       padding: 18px;
-      box-shadow: 0 8px 20px rgba(46,34,20,0.06);
-      transition: .35s;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+      transition: .3s;
     }
+
     .product-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 14px 32px rgba(46,34,20,0.12);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
+
     .product-img {
       height: 160px;
       width: 100%;
@@ -66,115 +79,142 @@
       border-radius: 8px;
     }
 
-    .map-frame { border-radius: 8px; overflow: hidden; border: 1px solid rgba(46,34,20,0.06); }
+    .gallery-img {
+      height: 230px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      transition: .35s;
+    }
 
-    footer { background: var(--dark-brown); color:#fff; padding:20px 0; }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: var(--dark-brown);
+      color: #fff;
+      padding: 20px 0;
+    }
   </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Kohsar Flour Mill</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<section id="hero">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-7" data-aos="fade-right">
-        <div class="hero-card">
-          <h1 class="display-5 mb-3">Kohsar Flour Mill</h1>
-          <p class="lead">Delivering premium flour using modern milling and strict quality checks.</p>
-        </div>
-      </div>
-      <div class="col-lg-5 text-center" data-aos="zoom-in">
-        <img src="images/main.png" class="img-fluid rounded shadow-lg" style="max-height:360px; object-fit:cover;">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container text-center">
-    <h2>About Kohsar Flour Mill</h2>
-    <p class="lead">A trusted name in premium flour production.</p>
-  </div>
-</section>
-
-<section id="products">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2>Our Products</h2>
-      <p>Pure, fresh and nutritious flour varieties.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up">
-        <div class="product-card">
-          <img src="images/atta.jpg" class="product-img" alt="Atta Flour">
-          <h5 class="mt-3">Atta (Whole Wheat Flour)</h5>
-          <p>Stone-milled whole wheat flour ideal for rotis and breads.</p>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-        <div class="product-card">
-          <img src="images/maida.jpg" class="product-img" alt="Maida">
-          <h5 class="mt-3">Maida (Refined Flour)</h5>
-          <p>Finely milled flour perfect for baking cakes, pastries and snacks.</p>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="product-card">
-          <img src="images/suji.jpg" class="product-img" alt="Suji">
-          <h5 class="mt-3">Suji (Semolina)</h5>
-          <p>Premium quality semolina for sweets, pasta and halwa.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Contact Us</h2>
-    <div class="row">
-      <div class="col-md-6 mb-4" data-aos="fade-right">
-        <iframe class="map-frame"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373631531696!3d-37.81627974201427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAwLjYiUyAxNDTCsDU3JzE0LjQiRQ!5e0!3m2!1sen!2s!4v1700000000000"
-          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-      <div class="col-md-6" data-aos="fade-left">
-        <h4>Management Contacts</h4>
-        <ul class="list-group">
-          <li class="list-group-item"><strong>Manager 1:</strong> +123 456 7890</li>
-          <li class="list-group-item"><strong>Manager 2:</strong> +987 654 3210</li>
-          <li class="list-group-item"><strong>Sales Dept:</strong> +111 222 3333</li>
-          <li class="list-group-item"><strong>Support:</strong> +444 555 6666</li>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Kohsar Flour Mill</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <p class="mt-3"><strong>Address:</strong> Kohsar Industrial Area, City</p>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<footer class="text-center">
-  <p class="mb-0">© 2025 Kohsar Flour Mill</p>
-</footer>
+  <!-- HERO IMAGE ONLY -->
+  <section id="hero"></section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 700, once: true });</script>
+  <!-- GALLERY -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Mill Gallery</h2>
+      <div class="row g-3">
+        <div class="col-md-4"><img src="images/gallery/image-(5).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(6).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(7).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(8).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(9).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(10).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(11).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(12).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(13).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(14).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(15).jpeg" class="gallery-img"></div>
+        <div class="col-md-4"><img src="images/gallery/image-(16).jpeg" class="gallery-img"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5 text-center">
+    <div class="container">
+      <h2>About Kohsar Flour Mill</h2>
+      <p class="lead">A trusted wheat processing unit providing pure & nutritious flour.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="pb-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Products</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="product-card"><img src="images/atta.jpg" class="product-img">
+            <h5 class="mt-3">Atta (Whole Wheat)</h5>
+            <p>Stone-ground for premium softness & freshness.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card"><img src="images/maida.jpg" class="product-img">
+            <h5 class="mt-3">Maida (Refined Flour)</h5>
+            <p>Perfect for bakery, snacks and confectionery.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card"><img src="images/suji.jpg" class="product-img">
+            <h5 class="mt-3">Suji (Semolina)</h5>
+            <p>Best for halwa, pasta and breakfast dishes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <!-- WORKING GOOGLE MAP IFRAME -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3295.211239694617!2d73.20511907552874!3d34.319639373057385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38de3c6d1091e789%3A0xe687fea5bcd0b530!2sKohsar%20Flour%20Mills!5e0!3m2!1sen!2suk!4v1764294713791!5m2!1sen!2suk"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="col-md-6">
+          <h4>Management Contact</h4>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>MD Mohsin:</strong> 0316-5920402</li>
+          </ul>
+
+          <p class="mt-3"><strong>Address:</strong> Abbottabd Road Upper Channal, Near Grains Godowns, Mansehra</p>
+          <p><strong>Office Phone:</strong> 0997-440373</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <p>© 2025 Kohsar Flour & General Mills Ltd.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 700, once: true });</script>
+
 </body>
+
 </html>
